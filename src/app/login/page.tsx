@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/navigation';
 import { createClient } from "../../../utils/supabase/client";
+import GoogleButton from "@/components/Buttons/GoogleButton";
 
 const supabase = createClient();
 
@@ -34,6 +35,12 @@ export default function Login() {
           router.push('/dashboard');
         }
     }
+  };
+
+  const handleGoogleLogin = async () => {
+    await supabase.auth.signInWithOAuth({
+      provider: 'google',
+    });
   };
  
   return (
@@ -90,6 +97,8 @@ export default function Login() {
             Sign In
           </button>
         </form>
+
+        <GoogleButton onClick={handleGoogleLogin} />
       </div>
     </div>
   );
