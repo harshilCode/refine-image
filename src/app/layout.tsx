@@ -1,7 +1,6 @@
-"use client";
+'use client';
 // import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { usePathname } from 'next/navigation';
 import "./globals.css";
 import Header from "@/components/Header";
 
@@ -26,14 +25,12 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname();
-  const isLoginPage = pathname === '/login';
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {!isLoginPage && <Header />}
+        <Header />
         {children}
       </body>
     </html>
