@@ -12,7 +12,7 @@ const Header = () => {
 
   useEffect(() => {
     // Check if a user is logged in when the component mounts
-    const user = supabase.auth.getUser();
+    // const user = supabase.auth.getUser();
 
     // Set the login state based on whether a user session is active
     supabase.auth.getSession().then(({ data: { session } }) => {

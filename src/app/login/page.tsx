@@ -17,7 +17,7 @@ export default function Login() {
     setIsClient(true);
   }, []);
 
-  const handleLogin = async (e: any) => {
+  const handleLogin = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     setError('');
 

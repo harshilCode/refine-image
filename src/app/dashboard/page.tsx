@@ -1,7 +1,6 @@
 "use client"
 import { useRef, useState } from "react";
 import { removeBackground } from "@imgly/background-removal";
-import Image from "next/image";
 import AuthGuard from "@/components/AuthGuard";
 
 export default function Dashboard() {
