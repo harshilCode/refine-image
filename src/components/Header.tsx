@@ -2,7 +2,9 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
-import { createClient } from '../../utils/supabase/client';
+import { createClient } from '@/utils/supabase/client';
+import Button from '@/components/Buttons/Button';
+import Logo from '@/components/Logo';
 
 const supabase = createClient();
 
@@ -38,13 +40,11 @@ const Header = () => {
   };
 
   return (
-    <header className="backdrop-blur-md bg-white/70 sticky top-0 z-50">
+    <header className="backdrop-blur-md bg-white/70 dark:bg-gray-900/70 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
         {/* Left Section: Logo */}
-        <div className="text-xl font-semibold text-gray-800">
-          <Link href="/">
-            RefineImage
-          </Link>
+        <div className="text-xl font-semibold text-gray-800 dark:text-gray-100">
+          <Logo />
         </div>
 
         {/* Center Section: Navigation Links */}
@@ -72,15 +72,11 @@ const Header = () => {
           </button>
         ) : (
           <>
-            <Link href="/login">
-              <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
-                Login
-              </button>
-            </Link>
             <Link href="/signup">
-              <button className="bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700 transition">
-                Sign Up
-              </button>
+              <Button text="Sign Up" color="white" textColor="black"/>
+            </Link>
+            <Link href="/login">
+              <Button text="Login" />
             </Link>
           </>
         )}
