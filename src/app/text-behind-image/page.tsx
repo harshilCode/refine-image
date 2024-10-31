@@ -108,12 +108,7 @@ export default function TextBehindImage() {
                     {
                         !processedImage && (
                             <div className="flex justify-center min-h-screen">
-                                <ImagePlaceholder
-                                    src="/path/to/image.jpg"
-                                    alt="Description of image"
-                                    width={400}
-                                    height={300}
-                                />
+                                <ImagePlaceholder />
                             </div>
                         )
                     }

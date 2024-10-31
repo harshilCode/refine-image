@@ -1,15 +1,4 @@
-import { useState } from 'react';
-import Image from 'next/image';
-
-interface ImagePlaceholderProps {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-}
-
-const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({ src, alt, width, height }) => {
-  const [isLoading, setIsLoading] = useState(true);
+const ImagePlaceholder: React.FC = () => {
 
   return (
     <div role="status" className="space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex">

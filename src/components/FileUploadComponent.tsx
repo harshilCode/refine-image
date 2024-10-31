@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 interface FileUploadComponentProps {
   handleUpload: () => void;
@@ -6,8 +6,7 @@ interface FileUploadComponentProps {
   ref: React.RefObject<HTMLInputElement>;
 }
 
-const FileUplodComponent: React.FC<FileUploadComponentProps> = ({ handleUpload, handleFileChange, ref }) => {
-  const [file, setFile] = useState(null);
+const FileUplodComponent: React.FC<FileUploadComponentProps> = ({ handleFileChange, ref }) => {
   return (
     <div className="flex justify-center w-full px-8">
       <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-large cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
