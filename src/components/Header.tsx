@@ -64,19 +64,20 @@ const Header = () => {
         {!isLoginPage && (
       <div className="flex items-center space-x-4">
         {isLoggedIn ? (
-          <button
-            onClick={handleLogout}
-            className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition"
-          >
-            Logout
-          </button>
+          // <button
+          //   onClick={handleLogout}
+          //   className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition"
+          // >
+          //   Logout
+          // </button>
+          <Button text="Logout" color="red" textColor="white" onClick={handleLogout} customClass='rounded-large'/>
         ) : (
           <>
             <Link href="/signup">
-              <Button text="Sign Up" color="white" textColor="black"/>
+              <Button text="Sign Up" color="white" textColor="black" customClass='rounded-large hover:bg-gray-100'/>
             </Link>
             <Link href="/login">
-              <Button text="Login" />
+              <Button text="Login" customClass='rounded-large'/>
             </Link>
           </>
         )}

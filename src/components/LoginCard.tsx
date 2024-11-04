@@ -31,7 +31,7 @@ export default function LoginCard({
                             <input
                                 type="email"
                                 placeholder="Email"
-                                className="rounded-large w-full px-6 py-4 bg-gray-100 text-gray-800 focus:outline-none focus:border-indigo-500"
+                                className="rounded-large w-full px-6 py-4 bg-gray-50 text-gray-800 border-slate-200 focus:outline-none focus:border-indigo-500"
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
                             />
@@ -45,7 +45,7 @@ export default function LoginCard({
                             <input
                                 type="password"
                                 placeholder="Password"
-                                className="rounded-large w-full px-6 py-4 bg-gray-100 text-gray-800 focus:outline-none focus:border-indigo-500"
+                                className="rounded-large w-full px-6 py-4 bg-gray-50 text-gray-800 border-slate-200 focus:outline-none focus:border-indigo-500"
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
                             />
